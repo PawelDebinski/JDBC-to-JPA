@@ -3,13 +3,14 @@ package pl.pawel.databasedemo.entity;
 import javax.persistence.Entity;
 import java.util.Date;
 
-@Entity
 public class Person {
 
     private int id;
     private String name;
     private String location;
     private Date birthDate;
+
+    public Person() {}
 
     public Person(int id, String name, String location, Date birthDate) {
         this.id = id;
@@ -48,5 +49,15 @@ public class Person {
 
     public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
+    }
+
+    @Override
+    public String toString() {
+        return "\nPerson{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", location='" + location + '\'' +
+                ", birthDate=" + birthDate +
+                '}';
     }
 }
