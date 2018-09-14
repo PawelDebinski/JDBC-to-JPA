@@ -25,5 +25,6 @@ public class DatabaseDemoApplication implements CommandLineRunner {
         logger.info("All users -> {}", dao.findAll());
         logger.info("User id 10001 -> {}", dao.findById(10001));
         logger.info("User name John -> {}", dao.findByName("John"));
+        logger.info("Deleting 10002 -> No of Rows Deleted - {}", dao.deleteById(10002));
     }
 }
